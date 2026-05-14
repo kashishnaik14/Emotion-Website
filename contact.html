@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body{
+            /* background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover; */
+            color: white;
+            background: linear-gradient(135deg,#eef2ff,#fdf2f8);
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background-color: gray;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav ul li a:hover{
+            color:#ff9800;
+        }
+        .sec-txt{
+            text-align: center;
+            color: black;
+            padding: 80px 20px;
+        }
+        .sec-txt h1{
+            font-size: 43px;
+            margin-bottom: 15px;
+        }
+        .sec-text p{
+            font-size: 17px;
+            max-width: 600px;
+            margin: auto;
+            opacity: 0.85;
+        }
+        .contact{
+            color: black;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .box{
+            background: white;
+            padding: 35px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .box h2{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .note{
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 26px;
+            color: gray;
+        }
+        .form-group{
+            margin-bottom: 18px;
+        }
+        label{
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+            margin-top: 6px;
+        }
+        input,select,textarea{
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc ;
+            font-size: 14px;
+            transition: 0.3s;
+        } 
+        input:focus,select:focus,textarea:focus{
+            border-color: #8282d5;
+            box-shadow:0 0 5px rgba(35, 35, 193, 0.4);
+        }
+        button{
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            /* background: rgb(211, 153, 172); */
+            /* opacity: 0.9; */
+            background: #f7b046;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 6px;
+        }
+
+        button:hover{
+            transform: translateY(-2px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .support{
+            text-align: center;
+            padding: 40px 20px;
+            font-style: italic;
+            color: black;
+            opacity: 0.8;
+        }
+
+        .success{
+          display:none;
+          color:green;
+          font-weight:bold;
+          text-align:center;
+        }
+
+        #success:target{
+          display:block;
+        }
+
+
+        footer{
+          text-align:center;
+          padding:20px;
+          background:#111;
+          color:white;
+          font-size:14px;
+        }
+
+        @media(max-width:768px){
+         nav{
+           flex-direction:column;
+           gap:15px;
+         }
+   
+         .contact-hero h1{
+           font-size:32px;
+          }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Emotion</h2>
+        <ul>
+           <li> <a href="index.html">Home</a> </li>
+           <li> <a href="emotion.html">Emotion</a> </li>
+           <li> <a href="service.html">Service</a> </li>
+           <li> <a href="contact.html">Contact</a> </li>
+        </ul>
+    </nav>
+    <section class="sec-txt">
+        <h1>Get in Touch 💬 </h1>
+        <p>Every emotion matters. Share what you're feeling — we're here to listen.</p>
+    </section>
+    <section class="contact">
+        <div class="box">
+            <h2>Send a Message</h2>
+            <p class="note">Your feelings are safe with us </p>
+ 
+            <form  action="#success" >
+                <div class="form-grp">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-grp">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-grp">
+                    <label for="feel">How you are feeling?</label>
+                    <select id="feel" required>
+                        <option>Select emotion</option>
+                        <option value="happy">Happy 😊</option>
+                        <option value="love">Love ❤️</option>
+                        <option value="exitment">Exitment 🤩</option>
+                        <option value="calm">Calm 😌</option>
+                        <option value="fear">Fear 😨</option>
+                        <option value="disappoint">Disappoint 😞</option>
+                        <option value="sad">Sad 😢</option>
+                        <option value="anger">Anger 😡</option>
+                    </select>
+                </div>
+                <div class="form-grp">
+                    <label for="msg">Your Email</label>
+                    <textarea id="msg" placeholder="Write what's on your mind..." rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Send safely</button>
+                <p class="success" id="success">
+                    ✅ Message sent successfully
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <section class="support">
+       <p>Reaching out is a sign of strength, not weakness.</p>
+    </section>
+
+    <footer>
+       © 2026 Emotion Website | Designed by Kashish
+    </footer>
+</body>
+</html>

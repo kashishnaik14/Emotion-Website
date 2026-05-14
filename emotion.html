@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body{
+            /* background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover; */
+             background: linear-gradient(180deg, #f4f6ff 0%, #ffffff 60%);
+             color: white;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background-color: gray;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav ul li a:hover{
+            color:#ff9800;
+        }
+
+        .Exp{
+            color: black;
+            background-color: lavender;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .Exp h1{
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .Exp p{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .emotion-section{
+            color: black;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            gap: 30px;
+            padding:40px 60px;
+        }
+       .positive, .negative{
+            max-width: 300px;
+       }
+
+       .pos-bg{
+            background:
+            radial-gradient(circle at top left, #e6fff2, transparent 60%),
+            radial-gradient(circle at bottom right, #d9ffe9, transparent 60%);
+            padding: 50px 20px;
+            border-radius: 20px;
+        }
+
+       .neg-bg{
+            background:
+            radial-gradient(circle at top left, #ffeaea, transparent 60%),
+            radial-gradient(circle at bottom right, #ffd6d6, transparent 60%);
+            padding: 50px 20px;
+            border-radius: 20px;
+       }
+       
+       .positive-text, .negative-text{
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
+        }
+
+       .emotions{       
+        /* position: relative; */
+        perspective: 1000px;
+        display: flex;
+        margin-top: 35px;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+       }
+
+       .emotion{
+          width: 220px;
+          height: 160px;
+          position: relative;
+          z-index: 1;
+       }
+       .emotion a{
+        width: 100%;
+        height: 100%;
+        /* position: relative; */
+        display: block;
+        text-decoration: none;
+        transform-style: preserve-3d;
+        transition: transform 0.9s ease;
+       }
+
+        .emotion a img{
+          width: 120px;
+       }
+
+       .emotion:hover a{
+          transform:rotateY(180deg);
+          z-index: 10;
+       }
+
+       .emotion-front,.emotion-back{
+          position: absolute;
+          backface-visibility: hidden;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); */
+          border-radius: 18px; 
+        }
+
+        .emotion-name {
+          margin-top: 10px;
+          font-weight: bold;
+          color: #333;
+          font-size: 16px;
+        }
+
+       .emotion-back{
+          background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+          color: #ffffff;
+          transform: rotateY(180deg);
+          padding: 16px;
+          text-align: center;
+          overflow: hidden;
+       }
+
+         .emotion-back h3 {
+           font-size: 18px;
+          margin-bottom: 8px;
+        }
+         
+        .emotion-back p {
+          font-size: 13px;
+          line-height: 1.4;
+        }
+
+        footer{
+            text-align: center;
+            background-color: black;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+         @media (max-width:768px) {
+            nav{
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .emotions{
+                grid-template-columns: 1fr; /* one card per row */
+            }
+           
+            .emotion-section{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Emotion</h2>
+        <ul>
+           <li> <a href="index.html">Home</a> </li>
+           <li> <a href="emotion.html">Emotion</a> </li>
+           <li> <a href="service.html">Service</a> </li>
+           <li> <a href="contact.html">Contact</a> </li>
+        </ul>
+    </nav> 
+    <section class="Exp">
+        <h1>Explore Human Emotions</h1>
+        <p>Every emotion has a message. Understanding them helps you grow emotionally and mentally.</p>
+    </section>
+    <section class="emotion-section">
+        <div class="positive pos-bg">
+            <h3>Positive Emotion section</h3>
+            <p class="positive-text">
+                Emotions that bring joy, motivation, and inner peace.
+            </p>
+            <div class="emotions">
+                <div class="emotion ">
+                    <a href="service.html#happy">
+                        <div class="emotion-front">
+                            <img src="img/emotion/happy.png" alt="happy">
+                            <span class="emotion-name">Happiness</span>
+                        </div>
+
+                        <div class="emotion-back">
+                         <h3>Happiness</h3>
+                         <p>Feeling of joy, positivity, and emotional balance</p>
+                       </div>
+                    </a>
+                </div>
+                <div class="emotion ">
+                    <a href="service.html#love">
+                        <div class="emotion-front">
+                            <img src="img/emotion/Love.png" alt="love">
+                            <span class="emotion-name">Love</span>
+                        </div>
+
+                        <div class="emotion-back">
+                         <h3>Love</h3>
+                         <p>A deep emotional connection that brings care, trust, and a sense of belonging.</p>
+                       </div>
+                    </a>
+                </div>
+                <div class="emotion ">
+                    <a href="service.html#exitment">
+                        <div class="emotion-front">
+                            <img src="img/emotion/Excitement.png" alt="exitment">
+                            <span class="emotion-name">Exitment</span>
+                        </div>
+
+                        <div class="emotion-back">
+                         <h3>Exitment</h3>
+                         <p>A burst of energy and enthusiasm that makes your heart race with anticipation.</p>
+                       </div>
+                    </a>
+                    </div>
+                <div class="emotion ">
+                    <a href="service.html#calm">
+                        <div class="emotion-front">
+                            <img src="img/emotion/calm.png" alt="calm">
+                            <span class="emotion-name">Calm</span>
+                        </div>
+
+                        <div class="emotion-back">
+                         <h3>Calm</h3>
+                         <p>A peaceful state where the mind feels relaxed, steady, and free from chaos.</p>
+                       </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="negative neg-bg">
+
+            <h3>Negative Emotion section</h3>
+            <p class="negative-text">
+                Emotions that need understanding, not suppression.
+            </p>
+            <div class="emotions">
+                <div class="emotion">
+                    <a href="service.html#sad">
+                       <div class="emotion-front">
+                          <img src="img/emotion/sad.png" alt="sad">
+                          <span class="emotion-name">Sad</span>
+                       </div>
+
+                       <div class="emotion-back">
+                         <h3>Sad</h3>
+                         <p>A quiet emotion that appears during loss or disappointment, asking for care and rest.</p>
+                       </div>
+                    </a>
+                </div>
+                <div class="emotion">
+                    <a href="service.html#anger">
+                      <div class="emotion-front">
+                          <img src="img/emotion/Anger.png" alt="anger">
+                          <span class="emotion-name">Anger</span>
+                      </div>
+
+                       <div class="emotion-back">
+                         <h3>Anger</h3>
+                         <p>An intense reaction to unfairness or hurt, signaling unmet needs or boundaries.</p>
+                       </div>
+                    </a>
+                </div>
+                <div class="emotion">
+                    <a href="service.html#fear">
+                        <div class="emotion-front">
+                           <img src="img/emotion/fear.png" alt="fear">
+                           <span class="emotion-name">Fear</span>
+                        </div>
+
+                        <div class="emotion-back">
+                         <h3>Fear</h3>
+                         <p>An emotion that warns of danger but can also limit growth if it controls decisions.</p>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="emotion">
+                    <a href="service.html#disappoint">
+                        <div class="emotion-front">
+                            <img src="img/emotion/Disappointment.png" alt="disappoint">
+                            <span class="emotion-name">Disappoint</span>
+                        </div>
+                        
+                        <div class="emotion-back">
+                         <h3>Disappoint</h3>
+                         <p>The feeling that arises when expectations break, leaving emotional tiredness behind.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        © 2026 Emotion Website | Designed by Kashish
+    </footer>
+</body>
+</html>

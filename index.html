@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body{
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+            color: white;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background-color: gray;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav ul li a:hover{
+            color:#ff9800;
+        }
+
+        .Exp{
+            padding:120px 20px 60px;
+            text-align: center;
+        }
+        .Exp h1{
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        .Exp p{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn
+        {
+            text-decoration: none;
+            color: white;
+            background-color:orange;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+        .btn:hover{
+            background:#e68900 ;
+        }
+
+        .cards{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px 20px;
+            flex-wrap: wrap;
+           
+        }
+        .card{
+            width: 250px;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(5px);
+            transition: 0.4s;
+        }
+        .card:hover{
+            transform: translateY(-10px);
+            box-shadow:0 15px 30px rgb(0, 0, 0, 0.4) ;
+        }
+        .card h3{
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        .card{
+            font-size: 14px;
+        }
+
+        .que{
+            text-align: center;
+            background: white;
+            color: black;
+            padding:80px 20px;
+        }
+        .que h2{
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+        .que p{
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+
+        .rateing{
+            display: flex;
+            justify-content:space-around;
+            flex-wrap:wrap;
+            padding: 60px 20px;
+            background-color: #111;
+        }
+        .rate-box{
+            text-align: center;
+            margin: 20px;
+        }
+        .rate-box h3{
+            font-size: 40px;
+            color: #ff9800;
+        }
+        .rate-box p{
+            font-size: 16px;
+        }
+
+
+        footer{
+            text-align: center;
+            background-color: black;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media(max-width:768px){
+            nav{
+                flex-direction:column;
+                gap:15px;
+            }
+            .que h1{
+                font-size:35px;
+            }
+            /* .cards{
+                flex-direction:column;
+                text-align:center;
+            } */
+            .rating{
+                flex-direction:column;
+                text-align:center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Emotion</h2>
+        <ul>
+           <li> <a href="index.html">Home</a> </li>
+           <li> <a href="emotion.html">Emotion</a> </li>
+           <li> <a href="service.html">Service</a> </li>
+           <li> <a href="contact.html">Contact</a> </li>
+        </ul>
+    </nav>    
+    <section class="Exp">
+       <h1>Discover the Power of Emotions</h1>
+       <p>Understand, manage and grow through your feelings.</p>
+       <a href="emotion.html" class="btn">Explore Now</a>
+    </section>
+       
+    <section class="cards">
+        <div class="card">
+            <h3>😊 Happiness</h3>
+            <p>Joy and satisfaction in life.</p>
+        </div>
+    
+        <div class="card">
+            <h3>😢 Sadness</h3>
+            <p>Helps emotional healing.</p>
+        </div>
+    
+        <div class="card">
+            <h3>😡 Anger</h3>
+            <p>Reaction to injustice.</p>
+        </div>
+    
+        <div class="card">
+            <h3>😌 Calm</h3>
+            <p>Mental peace and balance.</p>
+        </div>
+    </section>
+
+    <section class="que">
+        <h2>Why Emotions Matter?</h2>
+        <p>
+            Emotions guide our decisions, shape our experiences, and influence our relationships. 
+            Understanding them helps us live a balanced and meaningful life.
+        </p>
+    </section>
+    
+    <section class="rateing">
+        <div class="rate-box">
+            <h3>4+</h3>
+            <p>Main Emotions</p>
+        </div>
+        <div class="rate-box">
+            <h3>100%</h3>
+            <p>Human Experience</p>
+        </div>
+        <div class="rate-box">
+            <h3>24/7</h3>
+            <p>Feelings Active</p>
+        </div>
+    </section>
+    
+    <footer>
+        © 2026 Emotion Website | Designed by Kashish
+    </footer>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body{
+            /* background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover; */
+            color: white;
+            background: linear-gradient(135deg,#eef2ff,#fdf2f8);
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background-color: gray;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav ul li a:hover{
+            color:#ff9800;
+        }
+
+        .que{
+            /* max-width: 900px; */
+            margin: 60px auto;
+            padding:20px 40px;
+        }
+       
+       .emotion summary{
+            color:#ff9800;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 18px;
+            cursor: pointer;
+            /* border-radius: 12px; */
+            /* margin-bottom: 12px; */
+            list-style: none;
+            /* background: #f5f5ff; */
+        }
+        /* .emotion summary::marker{
+            display: none;
+        } */
+        .emotion summary:hover{
+            background: #ececff;
+        }
+
+        .content{
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            animation: slideOpen 0.4s ease;
+            color: black;
+        }
+        
+        .content h2{
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+        .content .des{
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .content h4{
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-size: 16px;
+            color: #222;
+        }
+        .content ul{
+            padding-left: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        .content p{
+            font-size: 14px;
+            color: #444;
+        }
+        footer{
+            text-align: center;
+            background-color: black;
+            padding: 20px;
+            font-size: 14px;
+        }
+        @media(max-width:768px){
+            nav{
+                flex-direction:column;
+                gap:15px;
+            }
+        }
+        @keyframes slideOpen {
+            
+            from {
+              opacity: 0;
+              transform: translateY(-10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Emotion</h2>
+        <ul>
+           <li> <a href="index.html">Home</a> </li>
+           <li> <a href="emotion.html">Emotion</a> </li>
+           <li> <a href="service.html">Service</a> </li>
+           <li> <a href="contact.html">Contact</a> </li>
+        </ul>
+    </nav>
+    
+    <section class="que">
+       
+            <details class="emotion">
+                <summary>What moment makes you forget your worries?</summary>
+                <div class="content" id="happy">
+                    <h2>😊 Happiness</h2>
+
+                    <p class="des">
+                       Happiness is a state of inner peace and joy where the mind feels light
+                       and the heart feels content without pressure.
+                    </p>
+
+                    <h4>Common Signs</h4>
+                    <ul>
+                      <li>Feeling relaxed and positive</li>
+                      <li>Smiling without reason</li>
+                      <li>Enjoying small moments</li>
+                    </ul>
+
+                    <h4>How to Maintain Happiness</h4>
+                    <p>
+                      Focus on the present moment, reduce comparison,
+                      and appreciate what you already have.
+                    </p>
+
+                </div>
+            </details>
+        
+            <details  class="emotion">
+                <summary>What emotion appears when tears want to speak?</summary>
+                <div class="content" id="sad">
+                    <h2>😢 Sadness</h2>
+
+                    <p class="des">
+                      Sadness is an emotional response to loss, disappointment,
+                      or unmet expectations. It asks for care, not silence.
+                    </p>
+              
+                    <h4>Common Signs</h4>
+                    <ul>
+                      <li>Low energy</li>
+                      <li>Desire to be alone</li>
+                      <li>Frequent overthinking</li>
+                    </ul>
+              
+                    <h4>Helpful Tips</h4>
+                    <ul>
+                      <li>Talk to someone you trust</li>
+                      <li>Allow yourself to feel</li>
+                      <li>Rest properly</li>
+                    </ul>
+              
+                    <h4>How to Heal Sadness</h4>
+                    <p>
+                      Accept the emotion, express it safely,
+                      and give yourself time to recover.
+                    </p>
+
+                </div>
+            </details>
+
+            <details  class="emotion">
+                <summary>What connects two hearts silently?</summary>
+                <div class="content" id="love">
+                    <h2>❤️ Love</h2>
+
+                    <p class="des">
+                      Love is the emotion that makes you care deeply without expecting anything back.
+                      It connects hearts through trust, warmth, and understanding.
+                    </p>
+                    
+                    <h4>Common Signs</h4>
+                    <ul>
+                      <li>Feeling safe around someone</li>
+                      <li>Thinking about others' happiness</li>
+                      <li>Emotional attachment and care</li>
+                    </ul>
+                    
+                    <h4>How to Nurture Love</h4>
+                    <p>
+                      Communicate honestly, respect boundaries,
+                      and express appreciation in small daily actions.
+                    </p>
+
+                </div>
+            </details>
+
+            <details  class="emotion">
+                <summary>What pushes your heartbeat faster when things feel unfair?</summary>
+                <div class="content" id="anger">
+                    <h2>🔥 Anger</h2>
+
+                    <p class="des">
+                      Anger appears when something feels unfair or when emotions are ignored.
+                      It is a signal, not a weakness.
+                    </p>
+                    
+                    <h4>Common Signs</h4>
+                    <ul>
+                      <li>Fast heartbeat</li>
+                      <li>Irritation or frustration</li>
+                      <li>Harsh thoughts or words</li>
+                    </ul>
+                    
+                    <h4>How to Control Anger</h4>
+                    <p>
+                      Pause before reacting, breathe deeply,
+                      and express feelings calmly instead of suppressing them.
+                    </p>
+
+                </div>
+            </details>
+
+            <details  class="emotion">
+                <summary>Which moment fills you with energy instantly?</summary>
+                <div class="content" id="exitment">
+                     <h2>⚡ Excitement</h2>
+
+                      <p class="des">
+                        Excitement is a rush of positive energy that makes you feel alive
+                        and eager for what’s coming next.
+                      </p>
+                      
+                      <h4>Common Signs</h4>
+                      <ul>
+                        <li>High energy levels</li>
+                        <li>Restlessness</li>
+                        <li>Smiling or talking fast</li>
+                      </ul>
+                      
+                      <h4>How to Balance Excitement</h4>
+                      <p>
+                        Enjoy the moment but stay grounded.
+                        Channel excitement into creativity or productive actions.
+                      </p>
+
+                </div>
+            </details>
+      
+            <details class="emotion">
+                <summary>What holds you back from taking a step forward?</summary>
+                <div class="content" id="fear">
+                    <h2>😨 Fear</h2>
+
+                    <p class="des">
+                      Fear protects you from danger but can limit growth
+                      if it controls your decisions.
+                    </p>
+                    
+                    <h4>Common Signs</h4>
+                    <ul>
+                      <li>Overthinking</li>
+                      <li>Avoiding situations</li>
+                      <li>Physical tension</li>
+                    </ul>
+                    
+                    <h4>How to Face Fear</h4>
+                    <p>
+                      Understand the cause, take small steps forward,
+                      and remind yourself that growth begins outside comfort zones.
+                    </p>
+
+                </div>
+            </details>
+
+            <details  class="emotion">
+                <summary>What makes your mind slow down naturally?</summary>
+                <div class="content" id="calm">
+                    <h2>🌿 Calm</h2>
+
+                    <p class="des">
+                      Calm is a peaceful emotional state where the mind feels steady
+                      and thoughts slow down naturally.
+                    </p>
+                    
+                    <h4>Common Signs</h4>
+                    <ul>
+                      <li>Slow breathing</li>
+                      <li>Clear thinking</li>
+                      <li>Emotional balance</li>
+                    </ul>
+                    
+                    <h4>How to Maintain Calm</h4>
+                    <p>
+                      Practice mindfulness, reduce noise,
+                      and spend time with yourself regularly.
+                    </p>
+
+                </div>
+            </details>
+
+            <details  class="emotion">
+                <summary>What makes the heart feel tired, not angry?</summary>
+                <div class="content" id="disapoint" >
+                    <h2>💔 Disappointment</h2>
+
+                    <p class="des">
+                      Disappointment comes when reality doesn’t match expectations.
+                      It hurts quietly and needs understanding.
+                    </p>
+                    
+                    <h4>Common Signs</h4>
+                    <ul>
+                      <li>Emotional tiredness</li>
+                      <li>Loss of motivation</li>
+                      <li>Feeling let down</li>
+                    </ul>
+                    
+                    <h4>How to Heal Disappointment</h4>
+                    <p>
+                      Accept the outcome, adjust expectations,
+                      and remind yourself that setbacks are part of growth.
+                    </p>
+
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Emotion Website | Designed by Kashish
+    </footer>
+</body>
+</html>
